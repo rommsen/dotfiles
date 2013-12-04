@@ -20,3 +20,6 @@ function dotfiles() {
 }
 
 src
+
+# make sure git is english
+alias git='LANG=en_US git'
