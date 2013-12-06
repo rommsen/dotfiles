@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-echo 'Dotfiles - "Cowboy" Ben Alman - http://benalman.com/'
+echo 'Dotfiles - Roman Sachse "Coruja/rommsen"'
+echo 'heavily (i mean really) based on dotfiles Cowboy" Ben Alman - http://benalman.com/'
+echo 'and https://github.com/mathiasbynens/dotfiles/'
 
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
 
@@ -8,10 +10,9 @@ Usage: $(basename "$0")
 
 See the README for documentation.
 https://github.com/cowboy/dotfiles
-
-Copyright (c) 2012 "Cowboy" Ben Alman
+and
+https://github.com/rommsen/dotfiles
 Licensed under the MIT license.
-http://benalman.com/about/license/
 HELP
 exit; fi
 
@@ -133,7 +134,7 @@ fi
 
 # If Git is not installed, install it (Ubuntu only, since Git comes standard
 # with recent XCode or CLT)
-if [[ ! "$(type -P git)" && "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
+if [[ ! "$(type -P git)" && "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu|Mint ]]; then
   e_header "Installing Git"
   sudo apt-get -qq install git-core
 fi
